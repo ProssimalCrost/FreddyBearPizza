@@ -2,8 +2,8 @@
   "compilerOptions": {
     /* ===== Ambiente ===== */
     "target": "ESNext",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
     "lib": ["ESNext"],
     "types": ["node"],
 
