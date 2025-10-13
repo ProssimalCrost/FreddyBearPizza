@@ -2,10 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "type": "module",
+  "main": "dist/server.js",
+  "type": "commonjs",
   "scripts": {
-    "dev": "ts-node-dev --loader ts-node/esm src/server.ts"
+    "dev": "ts-node-dev src/server.ts"
   },
   "keywords": [],
   "author": "",

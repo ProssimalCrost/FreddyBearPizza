@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* ===== Ambiente ===== */
     "target": "ESNext",
-    "module": "CommonJS",
+    "module": "commonjs",
     "moduleResolution": "node",
     "lib": ["ESNext"],
     "types": ["node"],
