@@ -18,7 +18,7 @@ app.use(router);
  });
 
  app.post('/usuarios', (req: Request, res: Response, next: NextFunction) => {
-   usuarios.push({id: 5, nome: 'Golden Freddy', idade: 35});
+   usuarios.push({id: 5, nome: 'Purple Guy', idade: 45});
    return res.json({message: 'Usuário adicionado com sucesso!'})
  });
 
@@ -35,4 +35,14 @@ app.use(router);
   return res.json({ message: 'Usuário atualizado com sucesso!' });
  });
 
- 
+app.delete('/usuarios/:id', (req, res) => {
+  const id = Number(req.params.id);
+  const usuarioIndex = usuarios.findIndex(u => u.id === id);
+
+  if (usuarioIndex < 0) {
+    return res.status(404).json({ message: 'Usuário não encontrado' });
+  }
+
+  usuarios.splice(usuarioIndex, 1); // remove 1 item na posição encontrada
+  return res.json({ message: 'Usuário deletado com sucesso!' });
+});
