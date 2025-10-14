@@ -46,3 +46,19 @@ app.delete('/usuarios/:id', (req, res) => {
   usuarios.splice(usuarioIndex, 1); // remove 1 item na posição encontrada
   return res.json({ message: 'Usuário deletado com sucesso!' });
 });
+
+app.patch('/usuarios/:id', (req, res) => {
+  const id = Number(req.params.id);
+  const { nome, idade } = req.body;
+  const usuario = usuarios.find(u => u.id === id);
+
+  if (!usuario) {
+    return res.status(404).json({ message: 'Usuário não encontrado' });
+  }
+
+  // Atualiza apenas o que foi enviado
+  if (nome !== undefined) usuario.nome = nome;
+  if (idade !== undefined) usuario.idade = idade;
+
+  return res.json({ message: 'Usuário atualizado parcialmente!' });
+});
