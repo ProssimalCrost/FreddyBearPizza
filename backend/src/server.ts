@@ -1,6 +1,7 @@
 import express, {Request, Response, NextFunction} from 'express';
 import {router} from './routes';
 import {usuarios} from './usuarios';
+import cors from 'cors';
 
 const app = express();
 app.use(express.json());
