@@ -13,3 +13,15 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Atividade {
+  id          Int      @id @default(autoincrement())
+  titulo      String
+  descricao   String
+  prioridade  String
+  createdAt   DateTime @default(now())
+}
