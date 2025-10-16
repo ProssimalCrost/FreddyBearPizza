@@ -14,14 +14,13 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-generator client {
-  provider = "prisma-client-js"
-}
+model User {
+  id        String  @id @default(uuid())
+  name      String
+  email     String
+  password  String
+  createdAt   DateTime? @default(now())
+  updatedAt   DateTime? @default(now())
 
-model Atividade {
-  id          Int      @id @default(autoincrement())
-  titulo      String
-  descricao   String
-  prioridade  String
-  createdAt   DateTime @default(now())
+  @@map("users")
 }
