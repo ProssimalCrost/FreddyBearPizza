@@ -16,10 +16,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@prisma/client": "^6.17.1",
-    "@prisma/extension-accelerate": "^2.0.2",
     "cors": "^2.8.5",
-    "express": "^5.1.0",
-    "prisma": "^6.17.1"
+    "express": "^5.1.0"
   }
 }
