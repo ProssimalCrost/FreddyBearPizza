@@ -9,7 +9,7 @@ app.use(router);
 app.use(cors());
 
 
- app.listen(3000, () => console.log('Servidor online!') )
+app.listen(3000, () => console.log('Servidor online!') )
 
  app.get('/', (req: Request, res: Response, next: NextFunction) => {
     return res.json({message: 'API is running!'})
