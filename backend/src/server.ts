@@ -8,10 +8,11 @@ app.use(express.json());
 app.use(router);
 app.use(cors());
 
+// comando para rodar o servidor: npx ts-node-dev "src/server.ts"
 
 app.listen(3000, () => console.log('Servidor online!') )
 
- app.get('/', (req: Request, res: Response, next: NextFunction) => {
+/* app.get('/', (req: Request, res: Response, next: NextFunction) => {
     return res.json({message: 'API is running!'})
  });
 
@@ -64,3 +65,4 @@ app.patch('/usuarios/:id', (req, res) => {
 
   return res.json({ message: 'Usuário atualizado parcialmente!' });
 });
+*/
