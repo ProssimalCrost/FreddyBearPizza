@@ -1,0 +1,1 @@
+DATABASE_URL="postgresql://postgres:30154651@localhost:5050/pizzaria?schema=public"
